@@ -1,13 +1,1 @@
-# @mauroviveros/ui
-
-## 0.1.2
-
-### Patch Changes
-
-- rename scope
-
-## 0.1.1
-
-### Patch Changes
-
-- 1cde3eb: Initial release of the UI component library
+## [0.1.5](https://github.com/mauroviveros/ui/compare/v0.1.4...v0.1.5) (2026-02-13)

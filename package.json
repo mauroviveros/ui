@@ -2,7 +2,7 @@
   "name": "@mauroviveros/ui",
   "description": "Personal UI component library for Astro projects, designed for reuse across multiple products and experiments.",
   "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "license": "MIT",
   "type": "module",
   "repository": {
@@ -19,10 +19,16 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
-  "scripts": {},
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
+    "version": "npm run changelog",
+    "postversion": "git push --follow-tags && npm publish"
+  },
   "peerDependencies": {
     "astro": "^4.0.0 || ^5.0.0",
     "tailwindcss": "^4.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "conventional-changelog-cli": "^5.0.0"
+  }
 }
