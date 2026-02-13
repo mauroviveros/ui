@@ -5,6 +5,10 @@
   "version": "0.1.2",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauroviveros/ui.git"
+  },
   "files": [
     "src",
     "index.ts"
