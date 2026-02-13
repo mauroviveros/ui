@@ -1,11 +1,16 @@
 {
-  "name": "@nexora/ui",
-  "version": "0.0.1",
+  "name": "@mviveros/ui",
+  "description": "Personal UI component library for Astro projects, designed for reuse across multiple products and experiments.",
+  "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
+  "version": "0.1.0",
+  "license": "MIT",
   "type": "module",
-  "keywords": ["astro-component"],
   "files": ["src", "index.ts"],
   "exports": {
     ".": "./index.ts"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "scripts": {},
   "private": true,
