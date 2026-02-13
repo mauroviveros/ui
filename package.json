@@ -2,7 +2,7 @@
   "name": "@mauroviveros/ui",
   "description": "Personal UI component library for Astro projects, designed for reuse across multiple products and experiments.",
   "author": "Mauro Daniel Viveros <maurod.viveros@gmail.com> (TRY Ubbe)",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "license": "MIT",
   "type": "module",
   "files": [
