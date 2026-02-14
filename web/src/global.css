@@ -6,8 +6,12 @@
     --color-foreground: oklch(0.9607 0.0044 247.87);
     --color-primary: oklch(0.6776 0.148143 238.1044);
     --color-primary-foreground: oklch(0.1432 0.0045 263.51);
-    --color-secondary: oklch(0.231 0.0119 264.31);
-    --color-secondary-foreground: oklch(0.8809 0.0134 247.98);
+    --color-secondary: oklch(0.620 0.100 100.00);
+    --color-secondary-foreground: oklch(0.120 0.005 95.00);
+    --color-accent: oklch(0.700 0.200 80.00);
+    --color-accent-foreground: oklch(0.120 0.010 90.00);
+    --color-destructive: oklch(0.5786 0.2137 27.17);
+    --color-destructive-foreground: oklch(0.9607 0.0044 247.87);
 
     --color-card: oklch(0.1884 0.0083 264.35);
     --color-card-foreground: oklch(0.9607 0.0044 247.87);
