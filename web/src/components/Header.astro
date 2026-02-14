@@ -1,0 +1,21 @@
+---
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  icon: string;
+  title: string;
+  description: string;
+}
+const { icon, title, description } = Astro.props as Props;
+---
+<header class="flex items-center justify-between border-b border-border bg-card text-card-foreground px-5 py-4">
+  <hgroup class="grid items-center gap-x-2 grid-cols-[auto_1fr] grid-rows-2">
+    <span class="flex size-7 items-center justify-center rounded-md bg-primary/10 text-primary row-span-2">
+      <Icon name={icon} class="size-4"/>
+    </span>
+
+    <h2 class="text-sm font-semibold text-foreground">{title}</h2>
+
+    <p class="text-xs text-muted-foreground">{description}</p>
+  </hgroup>
+</header>

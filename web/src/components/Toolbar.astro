@@ -1,0 +1,43 @@
+---
+import { Button } from "@mauroviveros/ui";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  breadcrumb: string;
+}
+
+const { breadcrumb } = Astro.props;
+---
+<header class="flex items-center justify-between border-b border-border px-5 py-2">
+  <div class="flex items-center gap-2">
+    <span class="text-xs font-medium text-muted-foreground select-none">Preview</span>
+    <span class="text-xs text-muted-foreground/50 select-none">/</span>
+    <span class="text-xs font-medium text-foreground">{breadcrumb}</span>
+  </div>
+
+  <div class="flex items-center gap-1">
+    <Button variant="ghost" size="xs" color="muted" class="text-primary! bg-primary/10!" disabled>
+      <Icon name="lucide:grid-3x3" class="size-3.5"/>
+    </Button>
+
+    <span class="mx-1 h-4 w-px bg-border block"></span>
+
+    <Button variant="ghost" size="xs" color="muted" class="text-primary! bg-primary/10!" disabled>
+      <Icon name="lucide:maximize-2" class="size-3.5"/>
+    </Button>
+
+    <Button variant="ghost" size="xs" color="muted" disabled>
+      <Icon name="lucide:monitor" class="size-3.5"/>
+    </Button>
+
+    <Button variant="ghost" size="xs" color="muted" disabled>
+      <Icon name="lucide:tablet" class="size-3.5"/>
+    </Button>
+
+    <Button variant="ghost" size="xs" color="muted" disabled>
+      <Icon name="lucide:smartphone" class="size-3.5"/>
+    </Button>
+
+  </div>
+
+</header>

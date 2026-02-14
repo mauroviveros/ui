@@ -1,0 +1,17 @@
+---
+import Header from "./Header.astro";
+import Toolbar from "./Toolbar.astro";
+
+interface Props {
+  icon: string;
+  name: string;
+  category: string;
+}
+const { icon, name, category } = Astro.props as Props;
+---
+<Header title={name} description={category} icon={icon}/>
+<section class="flex flex-1 flex-col">
+  <Toolbar breadcrumb={name}/>
+  <slot />
+
+</section>

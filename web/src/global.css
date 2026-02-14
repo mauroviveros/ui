@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@source "../node_modules/@mauroviveros/ui";
+
+@theme {
+    --color-background:  oklch(0.1662 0.0064 264.38);
+    --color-foreground: oklch(0.9607 0.0044 247.87);
+    --color-primary: oklch(0.6776 0.148143 238.1044);
+    --color-primary-foreground: oklch(0.1432 0.0045 263.51);
+    --color-secondary: oklch(0.231 0.0119 264.31);
+    --color-secondary-foreground: oklch(0.8809 0.0134 247.98);
+
+    --color-card: oklch(0.1884 0.0083 264.35);
+    --color-card-foreground: oklch(0.9607 0.0044 247.87);
+    --color-muted: oklch(0.231 0.0119 264.31);
+    --color-muted-foreground: oklch(0.6276 0.0323 256.79);
+
+    --color-border: oklch(0.2516 0.0136 264.29);
+
+    /*  */
+    --popover: hsl(220 14% 8%);
+    --popover-foreground: hsl(210 20% 95%);
+    --muted-foreground: hsl(215 14% 55%);
+    --accent: hsl(220 14% 15%);
+    --accent-foreground: hsl(210 20% 95%);
+    --destructive: hsl(0 72% 51%);
+    --destructive-foreground: hsl(210 20% 95%);
+
+    --input: hsl(220 14% 14%);
+    --ring: hsl(199 89% 48%);
+
+}
