@@ -6,7 +6,7 @@
     "baseUrl": "./src",
     "paths": {
       "@layout": ["layouts/Layout.astro"],
-      "@components/*": ["components/*"],
+      "@components": ["components/index.ts"],
     }
   }
 }

@@ -1,8 +1,7 @@
 ---
-import Layout from "@layout";
-import Preview from "@components/Preview.astro";
-import Canvas from "@components/Canvas.astro";
 import { Button as Btn } from "@mauroviveros/ui";
+import { Canvas, Controls, Docs, Preview } from "@components";
+import Layout from "@layout";
 ---
 
 <Layout>
@@ -111,5 +110,11 @@ import { Button as Btn } from "@mauroviveros/ui";
       </div>
 
     </Canvas>
+    <Controls>
+      Controls
+    </Controls>
   </Preview>
+  <Docs>
+    Docs
+  </Docs>
 </Layout>

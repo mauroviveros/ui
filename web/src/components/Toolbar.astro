@@ -16,7 +16,7 @@ const { breadcrumb } = Astro.props;
   </div>
 
   <div class="flex items-center gap-1">
-    <Button variant="ghost" size="xs" color="muted" class="text-primary! bg-primary/10!" disabled>
+    <Button id="btn-grid" variant="ghost" size="xs" color="muted" class="data-active:text-primary data-active:bg-primary/10">
       <Icon name="lucide:grid-3x3" class="size-3.5"/>
     </Button>
 
@@ -41,3 +41,13 @@ const { breadcrumb } = Astro.props;
   </div>
 
 </header>
+
+<script>
+  const gridElement = document.getElementById("canva-grid");
+  const gridBtn = document.getElementById("btn-grid");
+
+  gridBtn?.addEventListener("click", () => {
+    gridElement?.toggleAttribute("data-hidden");
+    gridBtn?.toggleAttribute("data-active");
+  });
+</script>
