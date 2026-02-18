@@ -1,120 +1,95 @@
 ---
-import { Button as Btn } from "@mauroviveros/ui";
+import { Button as Btn, ButtonColors, ButtonSizes, defaultButtonProps } from "@mauroviveros/ui";
+import { ButtonVariants } from "@mauroviveros/ui";
 import { Canvas, Controls, Docs, Preview } from "@components";
 import Layout from "@layout";
+
 ---
 
 <Layout>
   <Preview name="Button" category="Actions" icon="lucide:mouse-pointer-click">
     <Canvas>
-      <div class="grid grid-cols-3 gap-x-2 gap-y-4">
-        <!-- PRIMARY -->
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="primary" variant="solid" size="xs">Click me</Btn>
-          <Btn color="primary" variant="solid" size="sm">Click me</Btn>
-          <Btn color="primary" variant="solid" size="base">Click me</Btn>
-          <Btn color="primary" variant="solid" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="primary" variant="outline" size="xs">Click me</Btn>
-          <Btn color="primary" variant="outline" size="sm">Click me</Btn>
-          <Btn color="primary" variant="outline" size="base">Click me</Btn>
-          <Btn color="primary" variant="outline" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="primary" variant="ghost" size="xs">Click me</Btn>
-          <Btn color="primary" variant="ghost" size="sm">Click me</Btn>
-          <Btn color="primary" variant="ghost" size="base">Click me</Btn>
-          <Btn color="primary" variant="ghost" size="lg">Click me</Btn>
-        </div>
-
-        <!-- SECONDARY -->
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="secondary" variant="solid" size="xs">Click me</Btn>
-          <Btn color="secondary" variant="solid" size="sm">Click me</Btn>
-          <Btn color="secondary" variant="solid" size="base">Click me</Btn>
-          <Btn color="secondary" variant="solid" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="secondary" variant="outline" size="xs">Click me</Btn>
-          <Btn color="secondary" variant="outline" size="sm">Click me</Btn>
-          <Btn color="secondary" variant="outline" size="base">Click me</Btn>
-          <Btn color="secondary" variant="outline" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="secondary" variant="ghost" size="xs">Click me</Btn>
-          <Btn color="secondary" variant="ghost" size="sm">Click me</Btn>
-          <Btn color="secondary" variant="ghost" size="base">Click me</Btn>
-          <Btn color="secondary" variant="ghost" size="lg">Click me</Btn>
-        </div>
-
-        <!-- ACCENT -->
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="accent" variant="solid" size="xs">Click me</Btn>
-          <Btn color="accent" variant="solid" size="sm">Click me</Btn>
-          <Btn color="accent" variant="solid" size="base">Click me</Btn>
-          <Btn color="accent" variant="solid" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="accent" variant="outline" size="xs">Click me</Btn>
-          <Btn color="accent" variant="outline" size="sm">Click me</Btn>
-          <Btn color="accent" variant="outline" size="base">Click me</Btn>
-          <Btn color="accent" variant="outline" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="accent" variant="ghost" size="xs">Click me</Btn>
-          <Btn color="accent" variant="ghost" size="sm">Click me</Btn>
-          <Btn color="accent" variant="ghost" size="base">Click me</Btn>
-          <Btn color="accent" variant="ghost" size="lg">Click me</Btn>
-        </div>
-
-        <!-- DESTRUCTIVE -->
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="destructive" variant="solid" size="xs">Click me</Btn>
-          <Btn color="destructive" variant="solid" size="sm">Click me</Btn>
-          <Btn color="destructive" variant="solid" size="base">Click me</Btn>
-          <Btn color="destructive" variant="solid" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="destructive" variant="outline" size="xs">Click me</Btn>
-          <Btn color="destructive" variant="outline" size="sm">Click me</Btn>
-          <Btn color="destructive" variant="outline" size="base">Click me</Btn>
-          <Btn color="destructive" variant="outline" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="destructive" variant="ghost" size="xs">Click me</Btn>
-          <Btn color="destructive" variant="ghost" size="sm">Click me</Btn>
-          <Btn color="destructive" variant="ghost" size="base">Click me</Btn>
-          <Btn color="destructive" variant="ghost" size="lg">Click me</Btn>
-        </div>
-
-        <!-- MUTED -->
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="muted" variant="solid" size="xs">Click me</Btn>
-          <Btn color="muted" variant="solid" size="sm">Click me</Btn>
-          <Btn color="muted" variant="solid" size="base">Click me</Btn>
-          <Btn color="muted" variant="solid" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="muted" variant="outline" size="xs">Click me</Btn>
-          <Btn color="muted" variant="outline" size="sm">Click me</Btn>
-          <Btn color="muted" variant="outline" size="base">Click me</Btn>
-          <Btn color="muted" variant="outline" size="lg">Click me</Btn>
-        </div>
-        <div class="flex items-center justify-center gap-2">
-          <Btn color="muted" variant="ghost" size="xs">Click me</Btn>
-          <Btn color="muted" variant="ghost" size="sm">Click me</Btn>
-          <Btn color="muted" variant="ghost" size="base">Click me</Btn>
-          <Btn color="muted" variant="ghost" size="lg">Click me</Btn>
-        </div>
+      <div class="flex flex-wrap items-center justify-center gap-2">
+        {
+          Object.values(ButtonVariants).map(variant => (
+            Object.values(ButtonColors).map(color => (
+              Object.values(ButtonSizes).map(size => (
+                <Btn variant={variant} color={color} size={size} class:list={['aria-hidden:hidden', `btn-${variant} btn-${color} btn-${size}`]} aria-hidden="true">
+                  Click
+                </Btn>
+              ))
+            ))
+          ))
+        }
       </div>
 
     </Canvas>
     <Controls>
-      Controls
+      <fieldset>
+        <label for="variant">
+          <p>Variant</p>
+          <span>select</span>
+        </label>
+        <select name="variant" id="variant">
+          {
+            Object.values(ButtonVariants).map(variant => (
+              <option value={variant} selected={variant === defaultButtonProps.variant}>{variant}</option>
+            ))
+          }
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label for="color">
+          <p>Color</p>
+          <span>select</span>
+        </label>
+        <select name="color" id="color">
+          {
+            Object.values(ButtonColors).map(color => (
+              <option value={color} selected={color === defaultButtonProps.color}>{color}</option>
+            ))
+          }
+        </select>
+      </fieldset>
+
+      <fieldset>
+        <label for="size">
+          <p>Size</p>
+          <span>select</span>
+        </label>
+        <select name="size" id="size">
+          {
+            Object.values(ButtonSizes).map(size => (
+              <option value={size} selected={size === defaultButtonProps.size}>{size}</option>
+            ))
+          }
+        </select>
+      </fieldset>
     </Controls>
   </Preview>
   <Docs>
-    Docs
   </Docs>
 </Layout>
+
+
+<script>
+  const variant = document.getElementById("variant") as HTMLSelectElement;
+  const color = document.getElementById("color") as HTMLSelectElement;
+  const size = document.getElementById("size") as HTMLSelectElement;
+  const buttons = document.querySelectorAll("button");
+
+  function updateButtonVisibility() {
+    buttons?.forEach(button => {
+      const bool = button.matches(`.btn-${variant.value}.btn-${color.value}.btn-${size.value}`);
+      button.setAttribute("aria-hidden", String(!bool));
+    })
+  }
+
+  [variant, color, size].forEach(select => {
+    select.addEventListener("change", updateButtonVisibility);
+  });
+
+  updateButtonVisibility();
+</script>
+

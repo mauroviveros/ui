@@ -16,5 +16,14 @@ import { Button } from "@mauroviveros/ui";
     </Button>
   </header>
 
-  <slot/>
+  <section class:list={[
+    "grid grid-cols-1 gap-0 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4",
+    "[&>fieldset]:flex [&>fieldset]:flex-col [&>fieldset]:gap-2 [&>fieldset]:border-b [&>fieldset]:border-r [&>fieldset]:border-border [&>fieldset]:px-5 [&>fieldset]:py-4",
+    "[&>fieldset>label]:flex [&>fieldset>label]:items-center [&>fieldset>label]:justify-between",
+    "[&>fieldset>label>p]:text-xs [&>fieldset>label>p]:font-semibold [&>fieldset>label>p]:text-foreground",
+    "[&>fieldset>label>span]:rounded [&>fieldset>label>span]:bg-muted [&>fieldset>label>span]:px-1.5 [&>fieldset>label>span]:py-0.5 [&>fieldset>label>span]:text-[10px] [&>fieldset>label>span]:font-mono [&>fieldset>label>span]:text-muted-foreground",
+    "[&>fieldset>select]:h-9 [&>fieldset>select]:w-full [&>fieldset>select]:rounded-md [&>fieldset>select]:border [&>fieldset>select]:border-border [&>fieldset>select]:bg-background [&>fieldset>select]:px-3 [&>fieldset>select]:text-sm [&>fieldset>select]:text-foreground [&>fieldset>select]:focus:outline-none [&>fieldset>select]:focus:ring-2 [&>fieldset>select]:focus:ring-ring"
+  ]}>
+    <slot/>
+  </section>
 </article>
