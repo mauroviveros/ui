@@ -1,0 +1,52 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import { defaultButtonProps, type ButtonProps } from './types';
+import { CLASSES, COLOR_CLASSES, SIZE_CLASSES, VARIANT_CLASSES } from './styles';
+
+type Props = (ButtonProps & { href: string } & HTMLAttributes<'a'>) | (ButtonProps & { href?: undefined } & HTMLAttributes<'button'>);
+const { size = defaultButtonProps.size, variant = defaultButtonProps.variant, color = defaultButtonProps.color, disabled, tabindex, class: className, ...props } = Astro.props as Props;
+const { type = 'button', ...buttonProps } = props as HTMLAttributes<'button'>;
+const { href, target, ...anchorProps } = props as HTMLAttributes<'a'>;
+
+const classes = [
+  CLASSES,
+  SIZE_CLASSES[size],
+  VARIANT_CLASSES[variant],
+  COLOR_CLASSES[variant][color],
+]
+---
+
+{
+  href ? (
+    <a
+      href={href}
+      rel={target === '_blank' && anchorProps.rel ? 'noopener noreferrer' : anchorProps.rel}
+      target={target}
+      tabindex={disabled ? -1 : tabindex}
+      aria-disabled={disabled}
+      class:list={[
+        'aria-disabled:pointer-events-none aria-disabled:opacity-50',
+        classes,
+        className
+      ]}
+      {...anchorProps}
+    >
+      <slot />
+    </a>
+  ) : (
+    <button
+      type={type}
+      class:list={[
+        'disabled:pointer-events-none disabled:opacity-50',
+        classes,
+        className
+      ]}
+      aria-disabled={disabled}
+      disabled={disabled}
+      tabindex={disabled ? -1 : tabindex}
+      {...buttonProps}
+    >
+      <slot />
+    </button>
+  )
+}
